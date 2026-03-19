@@ -1,6 +1,6 @@
 # System Vision Document Template
 
-Purpose: one-page scoping artifact for a new system.
+Purpose: one-page scoping artifact za sistem studentske organizacije za vannastavne aktivnosti.
 
 Strict rules from course material:
 - Keep it to one page.
@@ -10,33 +10,40 @@ Strict rules from course material:
 
 ## Template
 
-**System name:**
+**System name:** [Naziv sistema]
 
 ## Problem Statement
-Write a short problem statement (recommended: max 3 sentences).
+Napisati kratak problem statement (preporuka: najvise 3 recenice).
 
-- What is wrong with the current situation?
-- Why is a new system needed?
-- Why does the problem matter now?
+Pitanja koja treba pokriti:
+- Sta je neefikasno ili nejasno u trenutnoj organizaciji vannastavnih aktivnosti?
+- Zasto je potreban novi sistem upravo za studentsku organizaciju?
+- Zasto je problem vazan sada?
+
+Pocetna formulacija:
+`Studentska organizacija trenutno upravlja vannastavnim aktivnostima kroz nepovezane kanale komunikacije, rucne evidencije i neujednacen proces prijave. Zbog toga studenti nemaju jasan pregled dostupnih aktivnosti, a koordinatori tesko planiraju kapacitete, komunikaciju i pracenje ucesca. Potreban je jedinstven sistem koji ce povecati preglednost, efikasnost organizacije i ukljucenost studenata.`
 
 ## System Capabilities
-List the main high-level capabilities of the proposed system.
+Navesti glavne high-level capability-je predlozenog sistema.
 
-- Capability 1
-- Capability 2
-- Capability 3
-- Capability 4
-- Capability 5
+- Objavljivanje i pregled kataloga vannastavnih aktivnosti, dogadjaja i radionica
+- Prijava i odjava studenata uz pracenje kapaciteta aktivnosti
+- Planiranje termina, lokacija, odgovornih osoba i potrebnih resursa
+- Slanje i pracenje obavjestenja, izmjena rasporeda i rokova za prijavu
+- Evidencija prisustva, angazmana i osnovnih rezultata aktivnosti
+- Priprema izvjestaja za rukovodstvo organizacije, mentore i partnere
 
 ## Business Benefits / Benefits and New Value
-List the expected benefits for users and/or the organization.
+Navesti ocekivane koristi za studente i organizaciju.
 
-- Benefit 1
-- Benefit 2
-- Benefit 3
-- Benefit 4
+- Veca ukljucenost studenata zahvaljujuci boljoj vidljivosti aktivnosti
+- Manje administrativnog i rucnog posla za koordinatore i upravu organizacije
+- Transparentnije upravljanje prijavama, kapacitetima i resursima
+- Laksa evaluacija uspjesnosti aktivnosti na osnovu pouzdanijih podataka
+- Bolja komunikacija sa fakultetom, mentorima i spoljnim partnerima
 
 ## Notes for analyst
-- Capabilities describe **what the system must be able to do**.
-- Benefits describe **why this matters**.
-- If a sentence sounds like architecture, framework choice, or database choice, remove it.
+- Capabilities opisuju **sta sistem treba da omoguci**.
+- Benefits opisuju **zasto je to vrijedno**.
+- Ako recenica zvuci kao architecture, framework choice ili database choice, ukloniti je.
+- Ako dokument preraste jednu stranu, skrati detalje i zadrzi samo problem, scope smjer i vrijednost.
