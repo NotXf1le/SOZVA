@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOZVA Web MVP</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="auth-screen" id="auth-screen">
+      <div class="auth-card">
+        <p class="eyebrow">Student Panel</p>
+        <h1>Login and choose the activities you want to join.</h1>
+        <p class="auth-lead">
+          Select your student profile to enter the panel, browse extracurricular activities and submit your registration.
+        </p>
+        <label class="field">
+          <span>Student profile</span>
+          <select id="login-student-select"></select>
+        </label>
+        <button id="login-button" class="button button--primary" type="button">Enter panel</button>
+      </div>
+    </section>
+
+    <div class="page-shell" id="app-shell" hidden>
+      <header class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">SOZVA / Student Activities</p>
+          <h1>One place for workshops, events and volunteer actions.</h1>
+          <p class="hero__lead">
+            The first web MVP covers catalog browsing, activity details and self-service registration with waitlist handling.
+          </p>
+          <div class="hero__stats" id="hero-stats"></div>
+        </div>
+        <div class="hero__panel">
+          <div>
+            <p class="section-kicker">Logged in</p>
+            <h2 id="current-student-name">Student</h2>
+            <p id="current-student-meta" class="hero__meta"></p>
+          </div>
+          <div class="button-row">
+            <button id="logout-button" class="button button--ghost" type="button">Log out</button>
+            <button id="reset-button" class="button button--ghost" type="button">Reset demo data</button>
+          </div>
+          <div class="hero__note">
+            <strong>Demo note:</strong>
+            registrations are stored locally in your browser to simulate the first executable slice of the product.
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="catalog-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Catalog</p>
+              <h2>Browse published activities</h2>
+            </div>
+            <p class="panel-heading__note" id="results-note"></p>
+          </div>
+
+          <div class="filters">
+            <label class="field">
+              <span>Search</span>
+              <input id="search-input" type="search" placeholder="Workshop, volunteer, public speaking..." />
+            </label>
+            <label class="field">
+              <span>Category</span>
+              <select id="category-select"></select>
+            </label>
+            <label class="field">
+              <span>Availability</span>
+              <select id="availability-select">
+                <option value="all">All statuses</option>
+                <option value="open">Open for registration</option>
+                <option value="waitlist">Only waitlist</option>
+                <option value="closed">Closed</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="activity-list" class="activity-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="detail-panel">
+          <div id="detail-card" class="detail-card"></div>
+
+          <section class="feed-card">
+            <div class="panel-heading panel-heading--compact">
+              <div>
+                <p class="section-kicker">Signals</p>
+                <h2>Recent system messages</h2>
+              </div>
+            </div>
+            <div id="message-feed" class="message-feed"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./src/presentation/main.js"></script>
+  </body>
+</html>
