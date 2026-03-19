@@ -1,0 +1,26 @@
+@startuml
+start
+
+partition Actor {
+  :Start interaction;
+}
+
+partition System {
+  :Display initial screen;
+}
+
+partition Actor {
+  :Enter data;
+}
+
+partition System {
+  if (Input valid?) then (yes)
+    :Process request;
+    :Return result;
+  else (no)
+    :Show validation error;
+  endif
+}
+
+stop
+@enduml

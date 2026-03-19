@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Primary Actor" as PrimaryActor
+actor "Secondary Actor" as SecondaryActor
+
+rectangle "System Name" {
+  usecase "Create Something" as UC_Create
+  usecase "Update Something" as UC_Update
+  usecase "Authenticate User" as UC_Auth
+}
+
+PrimaryActor --> UC_Create
+PrimaryActor --> UC_Update
+SecondaryActor --> UC_Update
+
+UC_Create ..> UC_Auth : <<include>>
+UC_Update ..> UC_Auth : <<include>>
+
+note bottom of UC_Create
+Use case names should be Verb-Noun.
+Actors stay outside the system boundary.
+end note
+@enduml

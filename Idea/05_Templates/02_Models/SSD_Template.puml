@@ -1,0 +1,19 @@
+@startuml
+actor Actor
+participant "System" as System
+
+Actor -> System : requestService(inputData)
+System --> Actor : result := requestService(outputData)
+
+alt [condition is true]
+  Actor -> System : confirmAction(id)
+  System --> Actor : confirmation := confirmAction(status)
+else [condition is false]
+  System --> Actor : error := showError(message)
+end
+
+loop * for each selected item
+  Actor -> System : addItem(itemId, quantity)
+  System --> Actor : cartState := addItem(updatedCart)
+end
+@enduml
